@@ -1,0 +1,8 @@
+project: savantenvs/zlib-ng
+target: fuzzer_example_small
+cmds:
+  - cmd: /mayhem/fuzzer_example_small
+    libfuzzer: true
+    timeout: 30
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'
