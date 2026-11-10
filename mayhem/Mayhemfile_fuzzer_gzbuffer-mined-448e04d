@@ -1,0 +1,11 @@
+project: savantenvs/zlib-ng
+target: fuzzer_gzbuffer-mined-448e04d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_gzbuffer-mined-448e04d/testsuite
+cmds:
+  - cmd: /mayhem/fuzzer_gzbuffer
+    libfuzzer: true
+    timeout: 30
+    env:
+      MFUZZ_COMPAT_LEVEL: '2'
